@@ -1,0 +1,20 @@
+.menu-link {
+    cursor: pointer;
+
+    --medium-gray: hsl(0, 0%, 41%);
+}
+
+.menu-link:hover .drowdown-text{
+    color: black;
+}
+
+.drowdown-text {
+    display: flex;
+    align-items: center;
+    color: var(--medium-gray);
+    font-weight: 600;
+}
+
+.arrow-down {
+    margin-left: .5rem;
+}

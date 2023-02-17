@@ -1,0 +1,48 @@
+.flex {
+    display: flex;
+}
+
+header{
+    background-color: hsl(0, 0%, 98%);
+}
+
+nav {
+    justify-content: space-between;
+}
+
+.logo {
+    width: 5rem;
+    height: 2rem;
+    margin: auto;
+}
+
+.logo-links li{
+    list-style-type: none;
+}
+
+.header-links {
+    justify-content: space-between;
+    width: 23rem;
+}
+
+.account-links {
+    gap: 2rem;
+    align-items: center;
+}
+
+.account-links button {
+    width: 5rem;
+    height: 2rem;
+    background: none;
+    color: black;
+    cursor: pointer;
+}
+
+.login-btn {
+    border: none;
+}
+
+.signup-btn {
+    border: 1px solid black;
+    border-radius: 8px;
+}
