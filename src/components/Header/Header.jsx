@@ -46,10 +46,12 @@ const headerLinks = [
     {
         title: "Careers",
         hasMenu: false,
+        menuItems: []
     },
     {
         title: "About",
         hasMenu: false,
+        menuItems: []
     },
 ];
 

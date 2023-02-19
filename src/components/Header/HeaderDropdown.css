@@ -13,8 +13,35 @@
     align-items: center;
     color: var(--medium-gray);
     font-weight: 600;
+    position: relative;
 }
 
 .arrow-down {
     margin-left: .5rem;
+}
+
+.menu-hidden {
+    display: none;
+}
+
+.menu-visible {
+    display: flex;
+}
+
+.menu-container {
+    position: absolute;
+    top: 185%;
+    width: 8rem;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.menu-item {
+    display: flex;
+    gap: .5rem;
+}
+
+.menu-item img {
+    width: 16px;
+    height: 20px;
 }
