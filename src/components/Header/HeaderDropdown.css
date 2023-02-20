@@ -30,10 +30,16 @@
 
 .menu-container {
     position: absolute;
-    top: 185%;
+    top: 130%;
     width: 8rem;
     flex-direction: column;
     gap: .7rem;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+    color: var(--medium-gray);
 }
 
 .menu-item {

@@ -58,6 +58,10 @@ const headerLinks = [
 const Header = () => {
     const [myHeaderLinks, setMyHeaderLinks] = useState(headerLinks);
 
+    function handleMobileMenu() {
+
+    }
+
     return (
         <header>
             <nav className="flex">
@@ -77,6 +81,9 @@ const Header = () => {
                 <div className="account-links flex">
                     <button className="login-btn">Login</button>
                     <button className="signup-btn">Register</button>
+                </div>
+                <div className="mobile-hamburger" onClick={handleMobileMenu}>
+                    <img src="icon-menu.svg" alt="mobile menu" />
                 </div>
             </nav>
         </header>

@@ -23,7 +23,8 @@ function App() {
           </div>
         </div>
         <div className="hero-container">
-          <img src="image-hero-desktop.png" alt="image hero" />
+          <img src="image-hero-desktop.png" className='hero-desktop' alt="image hero" />
+          <img src="image-hero-mobile.png" className='hero-mobile' alt="image hero" />
         </div>
       </main>
     </>

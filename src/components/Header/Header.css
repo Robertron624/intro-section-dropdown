@@ -46,3 +46,23 @@ nav {
     border: 1px solid black;
     border-radius: 8px;
 }
+
+.mobile-hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 376px){
+
+    nav {
+        padding: 0 1rem;
+    }
+
+    .account-links,
+    .header-links {
+      display: none;
+    }
+
+    .mobile-hamburger {
+        display: inline-block;
+    }
+}
