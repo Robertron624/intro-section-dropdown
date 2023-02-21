@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import HeaderDropdown from "./HeaderDropdown";
+import { Drawer, Box } from "@mui/material";
 
 const headerLinks = [
     {
@@ -31,36 +32,47 @@ const headerLinks = [
         menuItems: [
             {
                 title: "History",
-                icon: ""
+                icon: "",
             },
             {
                 title: "Our Team",
-                icon: ""
+                icon: "",
             },
             {
                 title: "Blog",
-                icon: ""
+                icon: "",
             },
         ],
     },
     {
         title: "Careers",
         hasMenu: false,
-        menuItems: []
+        menuItems: [],
     },
     {
         title: "About",
         hasMenu: false,
-        menuItems: []
+        menuItems: [],
     },
 ];
 
 const Header = () => {
     const [myHeaderLinks, setMyHeaderLinks] = useState(headerLinks);
 
-    function handleMobileMenu() {
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
-    }
+    function handleMobileMenu() {}
+
+    const toggleDrawer = (open) => (event) => {
+        if (
+          event.type === "keydown" &&
+          (event.key === "Tab" || event.key === "Shift")
+        ) {
+          return;
+        }
+        //changes the function state according to the value of open
+        setIsDrawerOpen(open);
+      };
 
     return (
         <header>
@@ -70,7 +82,7 @@ const Header = () => {
                     <ul className="header-links flex">
                         {myHeaderLinks.map((link, i) => (
                             <HeaderDropdown
-                            key={i}
+                                key={i}
                                 title={link.title}
                                 hasMenu={link.hasMenu}
                                 menuItems={link.menuItems}
@@ -82,8 +94,34 @@ const Header = () => {
                     <button className="login-btn">Login</button>
                     <button className="signup-btn">Register</button>
                 </div>
-                <div className="mobile-hamburger" onClick={handleMobileMenu}>
-                    <img src="icon-menu.svg" alt="mobile menu" />
+                <div className="mobile-hamburger" >
+                    <img src="icon-menu.svg" alt="mobile menu" onClick={toggleDrawer(true)} />
+
+                    <Drawer
+                        //from which side the drawer slides in
+                        anchor="right"
+                        //if open is true --> drawer is shown
+                        open={isDrawerOpen}
+                        //function that is called when the drawer should close
+                        onClose={toggleDrawer(false)}
+                        //function that is called when the drawer should open
+                        onOpen={toggleDrawer(true)}
+                    >
+                        {/* The inside of the drawer */}
+                        <Box
+                            sx={{
+                                p: 2,
+                                height: 1,
+                                backgroundColor: "#dbc8ff",
+                            }}
+                        >
+                            {/* when clicking the icon it calls the function toggleDrawer and closes the drawer by setting the variable open to false */}
+                            {/* <IconButton sx={{ mb: 2 }}>
+                                <CloseIcon onClick={toggleDrawer(false)} />
+                            </IconButton> */}
+
+                        </Box>
+                    </Drawer>
                 </div>
             </nav>
         </header>
