@@ -30,8 +30,9 @@
 
 .menu-item-container {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     color: var(--medium-gray);
+    font-size: 13px;
 }
 
 .menu-item-container img {
