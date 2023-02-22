@@ -51,6 +51,11 @@ nav {
     display: none;
 }
 
+.close-icon-container {
+    display: flex;
+    justify-content: end;
+}
+
 @media screen and (max-width: 376px){
 
     nav {

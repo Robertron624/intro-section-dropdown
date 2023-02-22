@@ -1,0 +1,57 @@
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-top: 2rem;
+
+    --medium-gray: hsl(0, 0%, 41%);
+}
+
+.menu-links a {
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+.menu-links a:link,
+.menu-links a:visited,
+.menu-links a:active ,
+.menu-links a:hover {
+    text-decoration: none;
+    color: var(--medium-gray);
+}
+
+.menu-items-container {
+    padding-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.51rem;
+}
+
+.menu-item-container {
+    display: flex;
+    gap: 0.5rem;
+    color: var(--medium-gray);
+}
+
+.menu-item-container img {
+    width: 16px;
+    height: 20px;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+    box-shadow: none !important;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+    padding-left: 0 !important;
+}
+
+.MuiPaper-rounded::before,
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root::before {
+    content: none !important;
+}
+
+.MuiAccordionSummary-content span {
+    color: var(--medium-gray);
+}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Header.css";
 import HeaderDropdown from "./HeaderDropdown";
-import { Drawer, Box } from "@mui/material";
+import { Drawer, Box} from "@mui/material";
+import MobileDrawer from "./MobileDrawer";
 
 const headerLinks = [
     {
@@ -59,20 +60,20 @@ const headerLinks = [
 const Header = () => {
     const [myHeaderLinks, setMyHeaderLinks] = useState(headerLinks);
 
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     function handleMobileMenu() {}
 
     const toggleDrawer = (open) => (event) => {
         if (
-          event.type === "keydown" &&
-          (event.key === "Tab" || event.key === "Shift")
+            event.type === "keydown" &&
+            (event.key === "Tab" || event.key === "Shift")
         ) {
-          return;
+            return;
         }
         //changes the function state according to the value of open
         setIsDrawerOpen(open);
-      };
+    };
 
     return (
         <header>
@@ -94,8 +95,12 @@ const Header = () => {
                     <button className="login-btn">Login</button>
                     <button className="signup-btn">Register</button>
                 </div>
-                <div className="mobile-hamburger" >
-                    <img src="icon-menu.svg" alt="mobile menu" onClick={toggleDrawer(true)} />
+                <div className="mobile-hamburger">
+                    <img
+                        src="icon-menu.svg"
+                        alt="mobile menu"
+                        onClick={toggleDrawer(true)}
+                    />
 
                     <Drawer
                         //from which side the drawer slides in
@@ -112,14 +117,17 @@ const Header = () => {
                             sx={{
                                 p: 2,
                                 height: 1,
-                                backgroundColor: "#dbc8ff",
+                                backgroundColor: "#fff",
                             }}
                         >
-                            {/* when clicking the icon it calls the function toggleDrawer and closes the drawer by setting the variable open to false */}
-                            {/* <IconButton sx={{ mb: 2 }}>
-                                <CloseIcon onClick={toggleDrawer(false)} />
-                            </IconButton> */}
-
+                            <div className="close-icon-container">
+                                <img
+                                    src="icon-close-menu.svg"
+                                    alt="icon close menu"
+                                    onClick={toggleDrawer(false)}
+                                />
+                            </div>
+                            <MobileDrawer items={myHeaderLinks}/>
                         </Box>
                     </Drawer>
                 </div>
