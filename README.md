@@ -29,11 +29,18 @@ Users should be able to:
 
 ### Screenshot
 
+Desktop
+![desktop](https://user-images.githubusercontent.com/72587880/220772390-c6c67a8c-c0f4-4ba8-b1d1-5cdf94e72e71.png)
+
+Mobile
+![mobile](https://user-images.githubusercontent.com/72587880/220772423-148b04cb-8bea-4988-af3c-cfdffa1f20e3.png)
+
+
 
 ### Links
 
 - Solution URL: [Solution URL here](https://github.com/Robertron624/intro-section-dropdown)
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL here](https://relaxed-valkyrie-94a2b6.netlify.app/)
 
 ## My process
 
@@ -45,7 +52,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Material UI](https://mui.com/) - Javascript framework
+- [Material UI](https://mui.com/) - Javascript UI library
 - [Vite](https://vitejs.dev/guide/) - Vite development tool 
 
 
